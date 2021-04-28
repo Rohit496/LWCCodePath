@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 25-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   25-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Dynamic Css">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="number"
+        variant="standard"
+        name="name"
+        label="Enter Your number"
+        placeholder="type here..."
+        onchange={dynamicCss}
+      ></lightning-input>
+      <div
+        style={percentage}
+        class="slds-notify slds-notify_alert slds-alert_error"
+        role="alert"
+      >
+        I am alert
+      </div>
+    </div>
+  </lightning-card>
+</template>

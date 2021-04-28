@@ -1,0 +1,6 @@
+@import "c/sharedCSS";
+
+.html {
+  width: 90%;
+  background-color: greenyellow;
+}

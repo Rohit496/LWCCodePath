@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 27-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   27-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card>
+    <!-- <c-p2c-alert-component message="I am Rohit Kumar"></c-p2c-alert-component> -->
+    <lightning-input
+      type="text"
+      variant="standard"
+      name="name"
+      label="Enter Your Name"
+      placeholder="type here..."
+      onchange={greetingMessage}
+    >
+    </lightning-input>
+    <c-p2c-alert-component message={greeting}></c-p2c-alert-component>
+  </lightning-card>
+</template>

@@ -1,0 +1,6 @@
+@import "c/sharedCSS";
+
+.css {
+  width: 80%;
+  background-color: blue;
+}

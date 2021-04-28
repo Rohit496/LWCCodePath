@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 23-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   23-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Query Selector"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_x-small">
+      <h1>This is heading</h1>
+      <template for:each={userDetails} for:item="con" for:index="index">
+        <h1 class="head" key={con}>{con}</h1>
+      </template>
+      <lightning-button
+        variant="brand"
+        label="Fetch Data"
+        title="titleName"
+        onclick={handleClick}
+      >
+      </lightning-button>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,4 @@
+h1 {
+  color: var(--lwc-colorTextError);
+  background-color: var(--lwc-colorBackgroundHighlight);
+}

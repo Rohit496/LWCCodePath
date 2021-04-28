@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 28-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   28-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Two way binding"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="text"
+        variant="standard"
+        name="name"
+        label="Enter Your name"
+        placeholder="type here..."
+        onchange={handlerChange}
+      ></lightning-input>
+      Hello,{message}
+    </div>
+  </lightning-card>
+</template>

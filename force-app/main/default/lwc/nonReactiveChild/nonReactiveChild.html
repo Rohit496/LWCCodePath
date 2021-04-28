@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 28-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   28-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title={title} icon-name="standard:account">
+    <div class="slds-m-around_medium">
+      <div class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+        <p>{message}</p>
+        <p>{userName}</p>
+        <p>{isVisible}</p>
+        <p>{full_Name}</p>
+      </div>
+    </div>
+  </lightning-card>
+</template>

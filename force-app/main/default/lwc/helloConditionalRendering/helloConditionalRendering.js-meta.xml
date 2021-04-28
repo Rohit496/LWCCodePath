@@ -2,8 +2,8 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>51.0</apiVersion>
     <isExposed>true</isExposed>
-    <description>This is my First Component </description>
-    <masterLabel>Hello world</masterLabel>
+    <description>This is my Second Component </description>
+    <masterLabel>Conditional Rendering</masterLabel>
     <targets>
         <target>lightning__RecordPage</target>
         <target>lightning__AppPage</target>

@@ -1,0 +1,16 @@
+h1 {
+  color: white;
+  background-color: red;
+}
+
+.slds-m-around_x-small .comment {
+  color: white;
+  background-color: blue;
+  font-size: 12px;
+}
+
+.slds-m-around_x-small .comment:hover {
+  color: white;
+  background-color: green;
+  font-size: 50px;
+}

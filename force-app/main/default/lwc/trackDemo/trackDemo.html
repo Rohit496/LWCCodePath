@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 28-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   28-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Track Demo"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="text"
+        variant="standard"
+        name="name"
+        label="Enter Your name"
+        placeholder="type here..."
+        onchange={myBinding}
+      ></lightning-input>
+      <template for:each={address} for:item="add">
+        <p key={add}>{add}</p>
+      </template>
+
+      <template for:each={employee} for:item="add">
+        <p key={add.id}>{add.name}, {add.age}</p>
+      </template>
+    </div>
+  </lightning-card>
+</template>

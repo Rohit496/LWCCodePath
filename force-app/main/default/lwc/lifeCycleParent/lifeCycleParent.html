@@ -1,0 +1,49 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 26-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   26-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Life Cycle Hocks Parent">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="text"
+        variant="standard"
+        name="name"
+        label="label"
+        placeholder="type here..."
+        onchange={handlerChange}
+      ></lightning-input>
+      {name}
+
+      <template if:false={isVisible}>
+        <lightning-button
+          variant="brand"
+          label="Show Child"
+          title="titleName"
+          onclick={showChild}
+        >
+        </lightning-button>
+      </template>
+
+      <template if:true={isVisible}>
+        <lightning-button
+          variant="brand"
+          label="Remove Child"
+          title="titleName"
+          onclick={showChild}
+        >
+        </lightning-button>
+      </template>
+
+      <template if:true={isVisible}>
+        <c-life-cycle-child></c-life-cycle-child>
+      </template>
+    </div>
+  </lightning-card>
+</template>

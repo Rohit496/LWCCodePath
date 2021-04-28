@@ -1,1 +1,50 @@
-<template> </template>
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 21-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   21-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card title="Two way Binding">
+    <div class="slds-m-around_x-small">
+      <lightning-input
+        type="text"
+        variant="standard"
+        name="name"
+        label="Enter Your text here"
+        placeholder="type here..."
+        onchange={textHandler}
+      >
+      </lightning-input>
+
+      <div>My name is:{fullName} and title: {title}</div>
+    </div>
+  </lightning-card>
+
+  <lightning-card title="@track properties">
+    <div class="slds-m-around_x-small">
+      <lightning-input
+        type="text"
+        variant="standard"
+        name="name"
+        label="Enter Your city here"
+        placeholder="type here..."
+        onchange={cityHandler}
+      >
+      </lightning-input>
+
+      <div>Your city name:{address.city}</div>
+    </div>
+  </lightning-card>
+
+  <lightning-card title="Getter Example">
+    <div class="slds-m-around_x-small">
+      First User:{myData}<br />
+      Multiplication of {num1} and {num2} is: {myAdditions}
+    </div>
+  </lightning-card>
+</template>

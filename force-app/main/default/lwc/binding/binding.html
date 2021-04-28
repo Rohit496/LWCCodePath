@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 27-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   27-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="text"
+        variant="standard"
+        name="name"
+        label="Enter you name"
+        placeholder="type here..."
+        onchange={handlerName}
+      ></lightning-input>
+
+      <p>Hello,{name}</p>
+    </div>
+  </lightning-card>
+</template>

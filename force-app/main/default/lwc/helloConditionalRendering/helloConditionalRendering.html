@@ -1,0 +1,53 @@
+<!--
+@description       : 
+@author            : Rohit Kumar
+@group             : 
+@last modified on  : 21-04-2021
+@last modified by  : Rohit Kumar
+Modifications Log 
+Ver   Date         Author        Modification
+1.0   21-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Conditional Rendering">
+    <div class="slds-m-around_x-small">
+      <lightning-button
+        variant="brand"
+        label="Click Me"
+        title="titleName"
+        onclick={handleClick}
+      >
+      </lightning-button>
+
+      <lightning-button
+        variant="brand"
+        class="slds-m-around--medium"
+        label="Toggle"
+        title="titleName"
+        onclick={toggleHandler}
+      >
+      </lightning-button>
+
+      <template if:true={isVisible}>
+        <div>Welcome to my LWC demo!!!</div>
+      </template>
+
+      <template if:false={isVisible}>
+        <div>You can not see the data. Please click on the button.</div>
+      </template>
+
+      <lightning-input
+        type="text"
+        variant="standard"
+        name="name"
+        label="Enter your hello"
+        placeholder="type here..."
+        onchange={dataHandler}
+      ></lightning-input>
+
+      <template if:true={dataChnage}>
+        <div>Hurray!!! Welcome {name}!!!</div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

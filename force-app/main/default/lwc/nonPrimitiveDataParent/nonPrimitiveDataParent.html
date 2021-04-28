@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 28-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   28-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <!--! Passing the data from parent to child -->
+  <c-non-reactive-child message="Data"></c-non-reactive-child>
+  <c-non-reactive-child user-name="Rohit"></c-non-reactive-child>
+  <c-non-reactive-child is-visible="true"></c-non-reactive-child>
+  <c-non-reactive-child
+    title="Parent to Child Data"
+    message="Rohit"
+    user-name="Rohit Kumar"
+    is-visible
+    full-name="Deepak Tyagi"
+  >
+  </c-non-reactive-child>
+
+  <c-crousal-component></c-crousal-component>
+</template>

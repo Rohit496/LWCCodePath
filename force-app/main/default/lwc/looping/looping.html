@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 22-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   22-04-2021   Rohit Kumar   Initial Version
+-->
+
+<template>
+  <lightning-card variant="Narrow" title="ForEach Example">
+    <div class="slds-m-around_x-small">
+      <template for:each={userList} for:item="user" for:index="index">
+        <ul key={user} class="slds-has-dividers_around-space">
+          <li class="slds-item">{user}</li>
+          <br />
+        </ul>
+      </template>
+    </div>
+  </lightning-card>
+
+  <lightning-card variant="Narrow" title="ForEach Example">
+    <div class="slds-m-around_x-small">
+      <template iterator:ceo={ceoList}>
+        <ul key={ceo.value.id} class="slds-has-dividers_around-space">
+          <template if:true={ceo.first}>
+            <div class="slds-box slds-theme_shade">first element</div>
+          </template>
+          <li class="slds-item">{ceo.value.name}</li>
+          <template if:true={ceo.last}>
+            <div class="slds-box slds-theme_shade">last element</div>
+          </template>
+        </ul>
+      </template>
+    </div>
+  </lightning-card>
+</template>
