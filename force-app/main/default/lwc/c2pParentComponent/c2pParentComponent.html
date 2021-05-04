@@ -1,0 +1,23 @@
+<!--
+@description       : 
+@author            : Rohit Kumar
+@group             : 
+@last modified on  : 03-05-2021
+@last modified by  : Rohit Kumar
+Modifications Log 
+Ver   Date         Author        Modification
+1.0   03-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card title="Parent">
+    <lightning-button
+      variant="brand"
+      label="Show Modal"
+      title="titleName"
+      onclick={handleClick}
+    ></lightning-button>
+    <template if:true={isShow}>
+      <c-c2p-modal-component onclose={closeModal}></c-c2p-modal-component>
+    </template>
+  </lightning-card>
+</template>

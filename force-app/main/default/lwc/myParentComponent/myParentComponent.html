@@ -1,0 +1,46 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 03-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   03-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="primitive data types"
+    icon-name="standard:account"
+  >
+    <c-my-alert-component
+      message="Welcome to child component"
+      salary="54321"
+      is-visible="false"
+      user-list={userDetail}
+      emp-data={empDetails}
+      carsoul-data={myData}
+      val={percentage}
+      slide-val={percentage}
+    >
+    </c-my-alert-component>
+    <lightning-input
+      type="number"
+      variant="standard"
+      name="name"
+      label="Enter percentage"
+      placeholder="type here..."
+      onchange={changeHandler}
+      value={percentage}
+    >
+    </lightning-input>
+    <lightning-button
+      variant="brand"
+      label="Default Value"
+      title="titleName"
+      onclick={handleClick}
+    >
+    </lightning-button>
+  </lightning-card>
+</template>

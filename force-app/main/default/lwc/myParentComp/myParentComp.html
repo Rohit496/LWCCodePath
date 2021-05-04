@@ -1,0 +1,43 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 02-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   01-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <!--!Complex data types-->
+  <lightning-card variant="Narrow" title="Parent" icon-name="standard:account">
+    <c-my-carasoul-comp
+      child-message={childData}
+      my-data={yourData}
+    ></c-my-carasoul-comp>
+  </lightning-card>
+
+  <!--!Action-->
+  <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="number"
+        variant="standard"
+        name="name"
+        label="Enter Parent"
+        placeholder="type here..."
+        onchange={dataHandler}
+      ></lightning-input>
+      <c-progress-bar-comp percentage-value={myPercents}></c-progress-bar-comp>
+    </div>
+  </lightning-card>
+
+  <!--!Method-->
+  <lightning-button
+    variant="brand"
+    label="Reset"
+    title="titleName"
+    onclick={handleClick}
+  ></lightning-button>
+  <c-slider-comp val={myPercents}></c-slider-comp>
+</template>

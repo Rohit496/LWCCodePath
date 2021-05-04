@@ -1,0 +1,60 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 04-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   04-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Parent" icon-name="standard:account">
+    <c-your-common-comp
+      message={yourMessage}
+      is-visible="false"
+      salary="54321"
+      user-list={userData}
+      emp-obj={employeeDetails}
+      carsoul-data={yourData}
+      val={progressVal}
+    >
+    </c-your-common-comp>
+
+    <lightning-input
+      type="number"
+      variant="standard"
+      name="name"
+      label="Enter Percentage"
+      placeholder="type here..."
+      onchange={progressHandler}
+      value={myVal}
+    ></lightning-input>
+    <lightning-button
+      variant="brand"
+      label="Reset Slider"
+      title="titleName"
+      onclick={handleClick}
+    >
+    </lightning-button>
+
+    <lightning-card title="Child to parent communication">
+      <div class="slds-var-m-around_medium">
+        <lightning-button
+          label="Show Modal"
+          onclick={clickHandler}
+        ></lightning-button>
+        <h1>{msg}</h1>
+        <template if:true={showModal}>
+          <c-modal-component onclose={closeHandler}></c-modal-component>
+        </template>
+      </div>
+    </lightning-card>
+    <lightning-button
+      variant="brand"
+      label="Open Modal"
+      title="titleName"
+      onclick={openModal}
+    ></lightning-button>
+  </lightning-card>
+</template>

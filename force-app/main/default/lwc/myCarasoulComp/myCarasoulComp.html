@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 02-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   01-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Child" icon-name="standard:account">
+    <div class="slds-m-around_medium">
+      Child Message{childMessage}
+      <lightning-carousel disable-auto-scroll>
+        <template for:each={myData} for:item="ds">
+          <lightning-carousel-image
+            key={ds.header}
+            src={ds.src}
+            header={ds.header}
+            description={ds.description}
+          >
+          </lightning-carousel-image>
+        </template>
+      </lightning-carousel>
+    </div>
+  </lightning-card>
+</template>

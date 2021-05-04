@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 02-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   02-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+    <div class="slds-m-around_medium">
+      <lightning-slider
+        label="Volume"
+        value={val}
+        onchange={slideHandler}
+      ></lightning-slider>
+    </div>
+  </lightning-card>
+</template>

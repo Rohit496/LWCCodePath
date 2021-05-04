@@ -1,0 +1,38 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 01-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   01-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Parent to Child communication"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_medium">
+      {message}<br />{isVisible}<br />{salary}<br />
+      <template for:each={userList} for:item="usr">
+        <div key={usr}>{usr}</div>
+      </template>
+    </div>
+  </lightning-card>
+
+  <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+    <lightning-carousel disable-auto-scroll>
+      <template for:each={myDetail} for:item="daa">
+        <lightning-carousel-image
+          key={daa.header}
+          src={daa.src}
+          header={daa.header}
+          description={daa.description}
+        >
+        </lightning-carousel-image>
+      </template>
+    </lightning-carousel>
+  </lightning-card>
+</template>

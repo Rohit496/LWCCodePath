@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 04-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   04-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="LWC LMS Component A"
+    icon-name="standard:account"
+  >
+    <lightning-input
+      type="text"
+      variant="standard"
+      name="name"
+      label="Enter Message"
+      placeholder="type here..."
+      onchange={getMessage}
+    >
+    </lightning-input>
+    <lightning-button
+      variant="brand"
+      label="Publish Messaage"
+      title="titleName"
+      onclick={handleClick}
+    >
+    </lightning-button>
+  </lightning-card>
+</template>

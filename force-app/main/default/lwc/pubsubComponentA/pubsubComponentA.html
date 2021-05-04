@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 04-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   04-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Component A"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="text"
+        variant="standard"
+        name="name"
+        label="Enter your message"
+        placeholder="type here..."
+        onchange={inputHandler}
+      ></lightning-input>
+      <lightning-button
+        variant="brand"
+        label="Submit"
+        title="titleName"
+        onclick={publishHandler}
+      >
+      </lightning-button>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,68 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 03-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   03-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <!--!Simple primitive data type-->
+  <lightning-card
+    variant="Narrow"
+    title="Simple properties"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_medium">
+      <div
+        class="slds-notify slds-notify_alert slds-alert_warning"
+        role="alert"
+      >
+        {message}, {isVisible}. {salary}
+      </div>
+    </div>
+  </lightning-card>
+  <!--!Array-->
+  <lightning-card variant="Narrow" title="Array" icon-name="standard:account">
+    <template for:each={userList} for:item="usr">
+      <p key={usr}>{usr}</p>
+    </template>
+  </lightning-card>
+  <!--!Object-->
+  <lightning-card variant="Narrow" title="Object" icon-name="standard:account">
+    <p>{empData.name}, {empData.salary}</p>
+  </lightning-card>
+
+  <!--!Array of objects-->
+  <lightning-card
+    variant="Narrow"
+    title="Array of objects"
+    icon-name="standard:account"
+  >
+    <lightning-carousel disable-auto-scroll>
+      <template for:each={carsoulData} for:item="emp">
+        <lightning-carousel-image
+          key={emp.header}
+          src={emp.src}
+          header={emp.header}
+          description={emp.description}
+        >
+        </lightning-carousel-image>
+      </template>
+    </lightning-carousel>
+  </lightning-card>
+
+  <!--! Progressbar component-->
+  <lightning-card
+    variant="Narrow"
+    title="Progressbar"
+    icon-name="standard:account"
+  >
+    <lightning-progress-bar value={val} size="large"></lightning-progress-bar>
+  </lightning-card>
+
+  <!--! Slider component-->
+  <lightning-slider label="Volume" value={slideVal}></lightning-slider>
+</template>

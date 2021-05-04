@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 01-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   01-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card>
+    <div class="slds-m-around_medium">
+      <h1>This is heading</h1>
+      <lightning-button
+        variant="brand"
+        label="Click Me"
+        title="titleName"
+        onclick={handleClick}
+      >
+      </lightning-button>
+
+      <template for:each={userList} for:item="usb">
+        <div key={usb} class="name">{usb}</div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

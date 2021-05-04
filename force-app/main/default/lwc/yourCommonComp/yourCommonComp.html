@@ -1,0 +1,48 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 04-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   04-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Primitive Data Types"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_medium">{message}, {isVisible} and {salary}</div>
+  </lightning-card>
+
+  <lightning-card
+    variant="Narrow"
+    title="Non-Primitive Data Types"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_medium">
+      <template for:each={userList} for:item="user">
+        <p key={user}>{user}</p>
+      </template>
+    </div>
+    <div class="slds-m-around_medium">
+      Emp Name:{empObj.name}<br />
+      Emp Salary:{empObj.sal}
+    </div>
+    <lightning-carousel>
+      <template for:each={carsoulData} for:item="data">
+        <lightning-carousel-image
+          key={data.header}
+          src={data.src}
+          header={data.header}
+          description={data.description}
+        >
+        </lightning-carousel-image>
+      </template>
+    </lightning-carousel>
+
+    <lightning-progress-bar value={val} size="large"></lightning-progress-bar>
+  </lightning-card>
+</template>

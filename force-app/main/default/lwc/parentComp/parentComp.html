@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 01-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   01-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Parent Component"
+    icon-name="standard:account"
+  >
+    <c-alert-comp
+      message="I am comming from parent to child"
+      salary="12345"
+      is-visible
+      user-list={userList}
+      my-detail={myData}
+    >
+    </c-alert-comp
+    ><br />
+  </lightning-card>
+</template>

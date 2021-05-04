@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 28-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   28-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+    Hello, {message}
+
+    <lightning-input
+      type="text"
+      variant="standard"
+      name="name"
+      label="Enter Your name"
+      placeholder="type here..."
+      onchange={handler}
+    >
+    </lightning-input>
+    <lightning-button
+      variant="brand"
+      label="Click Me"
+      title="titleName"
+      onclick={handleClick}
+    ></lightning-button>
+  </lightning-card>
+</template>

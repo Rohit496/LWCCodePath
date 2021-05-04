@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 28-04-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   28-04-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Parent component"
+    icon-name="standard:account"
+  >
+    <div class="slds-m-around_medium">
+      <c-child-second
+        message="I am from Parent12345 "
+        my-greeting="This is my greeting"
+        my-number="12345"
+        is-visible
+      >
+      </c-child-second>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 04-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   04-05-2021   Rohit Kumar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Child" icon-name="standard:account">
+    <p>What is your name</p>
+    <div>
+      <slot name="first"></slot>
+    </div>
+
+    <p>What is your age</p>
+    <div>
+      <slot name="last"></slot>
+    </div>
+    <footer class="slds-card__footer">
+      <slot name="footer"></slot>
+    </footer>
+  </lightning-card>
+</template>

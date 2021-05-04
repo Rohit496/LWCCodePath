@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : Rohit Kumar
+  @group             : 
+  @last modified on  : 04-05-2021
+  @last modified by  : Rohit Kumar
+  Modifications Log 
+  Ver   Date         Author        Modification
+  1.0   04-05-2021   Rohit Kumar   Initial Version
+-->
+<aura:component implements="flexipage:availableForAllPageTypes">
+  <aura:attribute name="message" type="string"></aura:attribute>
+  <lightning:card>
+    {!v.message}
+    <aura:set attribute="title"> Aura to LWC communication </aura:set>
+    <aura:set attribute="footer"> Footer </aura:set>
+    <c:lwcAuraCommunication
+      title="This is comming from Aura"
+      onmycustom="{!c.handler}"
+    ></c:lwcAuraCommunication>
+  </lightning:card>
+</aura:component>
